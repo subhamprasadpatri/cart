@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Marmeto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Marmeto" class="logo-image">
+                <span class="logo-text">Marmeto</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="thank-you-container">
+            <h1>Thank You for Your Purchase!</h1>
+            <p>Your order has been successfully placed. We will process it and ship it to you shortly.</p>
+            <button id="back-home-button">Go Back to Home</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Marmeto. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("back-home-button").addEventListener("click", () => {
+            window.location.href = "index.html"; // Redirects to the home page
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Marmeto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="js/script.js" defer></script> <!-- Ensure JS is loaded after the DOM -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Marmeto" class="logo-image">
+                <span class="logo-text">Marmeto</span>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html" class="active">
+                <img src="images/cart.png" alt="Cart" style="width: 30px; height: 30px; vertical-align: middle;"> 
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="cart-container">
+            <h1>Cart</h1>
+            <div class="breadcrumb">Home > Cart</div>
+            <div class="cart-wrapper">
+                <!-- Product Table -->
+                <div class="cart-products">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- Products will be dynamically injected here -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2>Cart Totals</h2>
+                    <div class="summary-details">
+                        <p>Subtotal: <span id="subtotal">Rs. 0.00</span></p>
+                        <p>Total: <span id="total">Rs. 0.00</span></p>
+                    </div>
+                    <button id="checkout-button">Check Out</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-trophy"></i>
+            <h4>High Quality</h4>
+            <p>Crafted from top materials</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Warranty Protection</h4>
+            <p>Over 2 years</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shipping-fast"></i>
+            <h4>Free Shipping</h4>
+            <p>Order over $150</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-headset"></i>
+            <h4>24/7 Support</h4>
+            <p>Dedicated support</p>
+          </div>
+        </div>
+    </footer>
+    
+    <!-- Checkout Button Script -->
+    <script>
+        // Wait for the DOM to be ready before adding the event listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkoutButton = document.getElementById("checkout-button");
+
+            // Event listener for the Checkout button
+            checkoutButton.addEventListener("click", function () {
+                // Perform any validation or final actions before checkout
+                // For now, just redirect to the thankyou.html page
+                window.location.href = "thankyou.html"; // Redirects to the thank you page
+            });
+        });
+    </script>
+</body>
+</html>
